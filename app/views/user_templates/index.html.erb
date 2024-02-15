@@ -13,7 +13,11 @@
     <tr>
       <td><%= a_user.id %></td>
       <td><%= a_user.username %></td>
-      <td>Show Details</td>
+      <td>
+        <a href="/users/<%= a_user.username %>">
+        Show Details
+        </a>
+      </td>
     </tr>
 
   <% end %>
