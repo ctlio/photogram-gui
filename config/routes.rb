@@ -12,6 +12,7 @@ get("/delete_photo/:path_id", {:controller => "photos", :action => "destroy"})
 
 post("/insert_photo",{:controller => "photos", :action => "create"} )
 post("/update_photo/:path_id", {:controller => "photos", :action => "update"})
+post("/add_comment", :controller => "comments", :action => "add_comment")
 
 
 
