@@ -93,18 +93,17 @@
 
   <%end%>
 
-</table>
-<h3>Add a new comment</h3>
 
+</table>
 <form action="/add_comment" method="post">
   <label for="browser_photo_id">Photo ID</label>
-  <input id="browser_photo_id" type=text placeholder="Enter the photo ID" name="input_photo_id" value="">
+  <input id="browser_photo_id" type=text placeholder="Enter the photo ID" name="query_photo_id" value="<%=@the_photo.id %>">
 
   <label for="browser_author_id">Author ID</label>
-  <input id="browser_author_id" type=text placeholder="Enter your author ID" name="input_author_id">
+  <input id="browser_author_id" type=text placeholder="Enter your author ID" name="query_author_id">
 
   <label for="browser_comment">Comment</label>
-  <textarea id="browser_comment" type=text placeholder="Enter a comment..." name="input_comment"></textarea>
+  <textarea id="browser_comment" type=text placeholder="Enter a comment..." name="query_comment"></textarea>
 
   <button>Add comment</button>
 </form>

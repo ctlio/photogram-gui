@@ -26,7 +26,23 @@ class UsersController < ApplicationController
 
     u.save
 
-    redirect_to("/photos/<%=@the_photo.poster.username%>")
+    redirect_url = "/users/" + u.username
+    redirect_to(redirect_url)
+
+  end
+
+  def update
+    id_username = params.fetch("path_username")
+    matching_username = User.where({ :username => id_username})
+    update_username = matching_username.at(0)
+
+    update_username.username = params.fetch("the_username")
+
+    update_username.save
+
+    
+    redirect_url = "/users/"+ update_username.username
+    redirect_to(redirect_url)
 
   end
 end

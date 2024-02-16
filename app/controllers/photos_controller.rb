@@ -36,7 +36,8 @@ class PhotosController < ApplicationController
 
     p.save
 
-    redirect_to("/photos/"+ p.id.to_s)
+    redirect_url = "/photos/"+ p.id.to_s
+    redirect_to(redirect_url)
     #render({:template => "/photo_templates/create"  })
 
   end
@@ -51,8 +52,11 @@ class PhotosController < ApplicationController
     
     u.save
 
-    #render({:template => "/photo_templates/update"})
-    redirect_to("/photos/"+ u.id.to_s)
+    redirect_url = "/photos/"+ u.id.to_s
+    redirect_to(redirect_url)
   end
+
+ 
+
 
 end
