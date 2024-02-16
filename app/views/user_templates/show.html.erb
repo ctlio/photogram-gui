@@ -9,7 +9,15 @@
 
   <dt>Edit User</dt>
 
-  <dd>form goes here</dd>
+  <form action= "/update_user_record/<%= %>" method = "post">
+   <div>
+      <label for = "username"> Username </label>
+      <input id="username" type= "text" name="the_username" value ="<%= @the_user.username%>">
+   </div>
+      <button>
+        Update User
+      </button>
+  </form>
 
 </dl>
 

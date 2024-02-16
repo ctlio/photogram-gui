@@ -1,6 +1,16 @@
 <h1> List of Users </h1>
 
 
+<form action= "/create_user_record/<%= %>" method = "post">
+  <div>
+    <label for = "username"> Username </label>
+    <input id="username" type= "text" name="the_username" placeholder ="Enter a username...">
+  </div>
+  <button>
+  Add a User
+  </button>
+</form>
+
 <table border ="1">
   <tr>
     <th>ID</th>

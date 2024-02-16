@@ -20,5 +20,13 @@ class UsersController < ApplicationController
       render({:template => "/user_templates/show"})
     #end  
   end
+  def create
+    u = User.new
+    u.username = params.fetch("the_username")
 
+    u.save
+
+    redirect_to("/photos/<%=@the_photo.poster.username%>")
+
+  end
 end
